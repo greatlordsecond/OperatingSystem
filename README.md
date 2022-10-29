@@ -461,6 +461,8 @@ sudo supergfxctl -g
 * Caffeine
 * Dash to Panel
 * Vitals
+* Arch Linux Updates Indicator
+* Super Graphics Control 
 
 **36) Machine Learning Setup**
 ```
