@@ -425,7 +425,7 @@ reboot
 ```
 yay -S visual-studio-code-bin android-studio intellij-idea-community-edition pycharm-community-edition \
 onlyoffice-bin libvirt virtualbox virtualbox-ext-vnc virtualbox-guest-iso virtualbox-guest-utils \
-virtualbox-host-dkms virtualbox-ext-oracle teamviewer google-chrome brave-bin
+virtualbox-host-dkms virtualbox-ext-oracle teamviewer google-chrome brave-bin bluemail
 ```
 
 **34) Supergfxctl - graphics switching**
