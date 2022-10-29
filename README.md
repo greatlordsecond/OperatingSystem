@@ -174,7 +174,7 @@ pacman -Sy linux-g14 linux-firmware linux-g14-headers base-devel efibootmgr mtoo
 dosfstools openssh iwd zsh ntfs-3g amd-ucode xf86-video-amdgpu git ark unrar sshfs \
 networkmanager asusctl nvidia-dkms supergfxctl gdm gnome gnome-tweaks firefox \
 deepin-icon-theme deepin-gtk-theme virtualgl vlc pulseaudio-bluetooth gimp kdenlive\
-qbittorrent obs-studio yt-dlp gparted
+qbittorrent obs-studio yt-dlp gparted geary 
 ```
 
 **15) Set the timezone**
@@ -425,7 +425,7 @@ reboot
 ```
 yay -S visual-studio-code-bin android-studio intellij-idea-community-edition pycharm-community-edition \
 onlyoffice-bin libvirt virtualbox virtualbox-ext-vnc virtualbox-guest-iso virtualbox-guest-utils \
-virtualbox-host-dkms virtualbox-ext-oracle teamviewer google-chrome brave-bin bluemail
+virtualbox-host-dkms virtualbox-ext-oracle teamviewer google-chrome brave-bin
 ```
 
 **34) Supergfxctl - graphics switching**
