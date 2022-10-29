@@ -174,7 +174,7 @@ pacman -Sy linux-g14 linux-firmware linux-g14-headers base-devel efibootmgr mtoo
 dosfstools openssh iwd zsh ntfs-3g amd-ucode xf86-video-amdgpu git ark unrar sshfs \
 networkmanager asusctl nvidia-dkms supergfxctl gdm gnome gnome-tweaks firefox \
 deepin-icon-theme deepin-gtk-theme virtualgl vlc pulseaudio-bluetooth gimp kdenlive\
-qbittorrent obs-studio yt-dlp gparted
+qbittorrent obs-studio yt-dlp gparted pacman-contrib
 ```
 
 **15) Set the timezone**
