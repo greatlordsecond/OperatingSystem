@@ -182,12 +182,7 @@ qbittorrent obs-studio yt-dlp gparted
 ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 ```
 
-**16) Update the Hardware clock**
-```
-hwclock --systohc
-```
-
-**17) Set locale**
+**16) Set locale**
 ```
 sed -i 's/#en_US.UTF-8/en_US.UTF-8/g' /etc/locale.gen (uncomment en_US.UTF-8)
 ```
@@ -195,7 +190,7 @@ sed -i 's/#en_US.UTF-8/en_US.UTF-8/g' /etc/locale.gen (uncomment en_US.UTF-8)
 locale-gen
 ```
 
-**18) Create locale.conf**
+**17) Create locale.conf**
 ```
 vim /etc/locale.conf
 ```
@@ -204,7 +199,7 @@ Add the below line with your locale info
 LANG=en_US.UTF-8
 ```
 
-**19) Set your hostname**
+**18) Set your hostname**
 ```
 vim /etc/hostname
 ```
@@ -213,7 +208,7 @@ Add something like below line
 ai
 ```
 
-**20) Set your hosts**
+**19) Set your hosts**
 ```
 vim /etc/hosts
 ```
@@ -224,7 +219,7 @@ Add the below lines by making required changes
 127.0.1.1   ai.localdomain   ai
 ```
 
-**21) Configure mkinitcpio**
+**20) Configure mkinitcpio**
 ```
 vim /etc/mkinitcpio.conf
 ```
@@ -233,7 +228,7 @@ Update "HOOKS=(base udev autodetect modconf block filesystems keyboard fsck)" to
 HOOKS=(base udev autodetect keyboard keymap consolefont modconf block filesystems resume fsck)
 ```
 
-**22) Generate initramfs & install bootctl**
+**21) Generate initramfs & install bootctl**
 ```
 mkinitcpio -p linux-g14
 ```
@@ -241,7 +236,7 @@ mkinitcpio -p linux-g14
 bootctl install
 ```
 
-**23) Create linux boot entry**
+**22) Create linux boot entry**
 ```
 vim /boot/loader/entries/arch.conf
 ```
@@ -254,7 +249,7 @@ initrd /initramfs-linux-g14.img
 options resume=/dev/nvme1n1p2 root=/dev/nvme1n1p3 rw pci=noaer quiet splash
 ```
 
-**24) Enable boot menu item for windows**
+**23) Enable boot menu item for windows**
 ```
 lsblk
 ```
@@ -281,7 +276,7 @@ cp -R /mnt/EFI/Microsoft /boot/EFI/
 umount /mnt
 ```
 
-**25) configure bootloader, Set root password and create a user****
+**24) configure bootloader, Set root password and create a user****
 ```
 vim /boot/loader/loader.conf
 ```
@@ -308,7 +303,7 @@ uncomment below line
 %wheel ALL=(ALL) ALL
 ```
 
-**26) Enable required services**
+**25) Enable required services**
 ```
 systemctl enable systemd-networkd
 systemctl enable systemd-resolved
@@ -319,7 +314,7 @@ systemctl enable power-profiles-daemon
 systemctl enable supergfxd
 systemctl enable gdm
 ```
-**27) Finish installation**
+**26) Finish installation**
 ```
 exit
 umount -a
@@ -335,9 +330,15 @@ PROMPT="%F{cyan}%n%f %F{white}%1~%f %F{yellow}$%f "
 RPROMPT="%F{241}%T%f"
 ```
 
+**27) set-ntp & update the Hardware clock**
+```
+sudo timedatectl set-ntp true
+sudo hwclock --systohc
+```
+
 **28) Adjust system clock from real time clock**
 ```
-timedatectl set-local-rtc 1 --adjust-system-clock
+sudo timedatectl set-local-rtc 1 --adjust-system-clock
 ```
 
 **29) Setup yay (AUR Helper)**
