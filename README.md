@@ -119,7 +119,7 @@ Press 'w' to write changes to disk.
 
 * Create filesystems
 ```
-mkfs.fat -F32 /dev/nvme1n1p1
+mkfs.vfat /dev/nvme1n1p1
 mkswap /dev/nvme1n1p2
 mkfs.ext4 /dev/nvme1n1p3
 ```
@@ -172,9 +172,9 @@ Server = https://arch.asus-linux.org
 ```
 pacman -Sy linux-g14 linux-firmware linux-g14-headers base-devel efibootmgr mtools \
 dosfstools openssh iwd zsh ntfs-3g amd-ucode xf86-video-amdgpu git ark unrar sshfs \
-networkmanager asusctl nvidia-dkms supergfxctl gdm gnome gnome-tweaks firefox \
-deepin-icon-theme deepin-gtk-theme virtualgl vlc pulseaudio-bluetooth gimp kdenlive\
-qbittorrent obs-studio yt-dlp gparted pacman-contrib
+networkmanager asusctl nvidia-dkms nvidia-utils nvidia-prime supergfxctl gdm gnome \
+gnome-tweaks firefox virtualgl vlc pulseaudio-bluetooth gimp kdenlive qbittorrent \
+obs-studio yt-dlp gparted pacman-contrib
 ```
 
 **15) Set the timezone**
