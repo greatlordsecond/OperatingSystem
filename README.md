@@ -327,7 +327,7 @@ chsh -s /bin/zsh
 Add below lines to ~/.zshrc
 ```
 PROMPT="%F{cyan}%n%f %F{white}%1~%f %F{yellow}$%f "
-RPROMPT="%F{241}%T%f"
+RPROMPT="%F{green}%T%f"
 ```
 
 **27) set-ntp & update the Hardware clock**
