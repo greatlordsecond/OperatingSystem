@@ -173,7 +173,7 @@ Server = https://arch.asus-linux.org
 pacman -Sy linux-g14 linux-firmware linux-g14-headers base-devel efibootmgr mtools \
 dosfstools openssh iwd zsh ntfs-3g amd-ucode xf86-video-amdgpu git ark unrar sshfs \
 networkmanager asusctl nvidia-dkms nvidia-utils nvidia-prime supergfxctl gdm gnome \
-gnome-tweaks firefox virtualgl vlc pulseaudio-bluetooth gimp kdenlive qbittorrent \
+gnome-tweaks firefox virtualgl vlc gimp kdenlive qbittorrent \
 obs-studio yt-dlp gparted pacman-contrib
 ```
 
