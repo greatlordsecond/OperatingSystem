@@ -103,7 +103,7 @@ gdisk /dev/nvme0n1
 - Type 'n' to create a new partition
 - Enter
 - Enter
-- +128G
+- Enter
 - 8300
 
 * Check if everything looks right by pressing ‘p’. It should look like this:
