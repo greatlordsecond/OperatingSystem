@@ -83,7 +83,7 @@ setfont ter-v24b
 
 * boot EFI Drive Setup
 ```
-gdisk /dev/nvme1n1
+gdisk /dev/nvme0n1
 ```
 - Type 'o' to create a partition table
 - Type 'n' for a new partition
@@ -119,23 +119,23 @@ Press 'w' to write changes to disk.
 
 * Create filesystems
 ```
-mkfs.vfat /dev/nvme1n1p1
-mkswap /dev/nvme1n1p2
-mkfs.ext4 /dev/nvme1n1p3
+mkfs.vfat /dev/nvme0n1p1
+mkswap /dev/nvme0n1p2
+mkfs.ext4 /dev/nvme0n1p3
 ```
 
 * Mount partitions
 ```
-mount /dev/nvme1n1p3 /mnt
+mount /dev/nvme0n1p3 /mnt
 ```
 ```
 mkdir /mnt/boot
 ```
 ```
-mount /dev/nvme1n1p1 /mnt/boot
+mount /dev/nvme0n1p1 /mnt/boot
 ```
 ```
-swapon /dev/nvme1n1p2
+swapon /dev/nvme0n1p2
 ```
 
 **9) Install Arch linux base and vim packages**
@@ -246,7 +246,7 @@ title arch
 linux /vmlinuz-linux-g14
 initrd /amd-ucode.img
 initrd /initramfs-linux-g14.img
-options resume=/dev/nvme1n1p2 root=/dev/nvme1n1p3 rw pci=noaer quiet splash
+options resume=/dev/nvme0n1p2 root=/dev/nvme0n1p3 rw pci=noaer quiet splash
 ```
 
 **23) Enable boot menu item for windows**
@@ -256,15 +256,15 @@ lsblk
 You will see something like 
 ```
     NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
-    nvme1n1     259:0    0 953.9G  0 disk 
+    nvme0n1     259:0    0 953.9G  0 disk 
     ...
-    nvme0n1     259:4    0 465.8G  0 disk 
-    -> nvme0n1p1 259:5    0   100M  0 part 
-       nvme0n1p2 259:6    0    16M  0 part 
+    nvme1n1     259:4    0 465.8G  0 disk 
+    -> nvme1n1p1 259:5    0   100M  0 part 
+       nvme1n1p2 259:6    0    16M  0 part 
     ...
 ```
 ```
-mount /dev/nvme0n1p1 /mnt
+mount /dev/nvme1n1p1 /mnt
 ```
 ```
 cp -R /mnt/EFI/Boot /boot/EFI/
