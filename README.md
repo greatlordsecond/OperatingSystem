@@ -172,9 +172,9 @@ Server = https://arch.asus-linux.org
 ```
 pacman -Sy linux-g14 linux-firmware linux-g14-headers base-devel efibootmgr mtools \
 dosfstools openssh iwd zsh ntfs-3g amd-ucode xf86-video-amdgpu git ark unrar sshfs \
-networkmanager asusctl nvidia-dkms nvidia-utils nvidia-prime supergfxctl gdm gnome \
-gnome-tweaks firefox virtualgl vlc gimp kdenlive qbittorrent \
-obs-studio yt-dlp gparted pacman-contrib
+networkmanager asusctl nvidia-dkms nvidia-utils nvidia-prime supergfxctl deepin \
+deepin-extra firefox virtualgl vlc gimp kdenlive qbittorrent obs-studio yt-dlp \
+gparted pacman-contrib
 ```
 
 **15) Set the timezone**
@@ -312,7 +312,7 @@ systemctl enable NetworkManager
 systemctl enable bluetooth
 systemctl enable power-profiles-daemon
 systemctl enable supergfxd
-systemctl enable gdm
+systemctl enable lightdm
 ```
 **26) Finish installation**
 ```
@@ -358,24 +358,7 @@ cd yay-git
 makepkg -si
 ```
 
-**30) Setup gnome-browser-connector**
-```
-cd /opt
-```
-```
-sudo git clone https://aur.archlinux.org/gnome-browser-connector.git
-```
-```
-sudo chown -R $USER ./gnome-browser-connector
-```
-```
-cd gnome-browser-connector/
-```
-```
-makepkg -si
-```
-
-**31) Install required fonts**
+**30) Install required fonts**
 ```
 yay -S ttf-comic-mono-git freetype2 ttf-ms-fonts
 ```
@@ -417,18 +400,18 @@ reboot
 
 ```
 
-**32) GPU Status tools**
+**31) GPU Status tools**
 * nvidia-smi
 * glxspheres64
 
-**33) Installing required packages**
+**32) Installing required packages**
 ```
 yay -S visual-studio-code-bin android-studio intellij-idea-community-edition pycharm-community-edition \
 onlyoffice-bin libvirt virtualbox virtualbox-ext-vnc virtualbox-guest-iso virtualbox-guest-utils \
 virtualbox-host-dkms virtualbox-ext-oracle teamviewer google-chrome brave-bin etcher-bin
 ```
 
-**34) Supergfxctl - graphics switching**
+**33) Supergfxctl - graphics switching**
 * integrated, uses the iGPU only and force-disables the dGPU
 ```
 sudo supergfxctl --mode integrated
@@ -456,15 +439,7 @@ need to relogin after switching
 sudo supergfxctl -g 
 ```
 
-**35) gnome extensions**
-* ArcMenu
-* Caffeine
-* Dash to Panel
-* Vitals
-* Arch Linux Updates Indicator
-* Super Graphics Control 
-
-**36) Machine Learning Setup**
+**34) Machine Learning Setup**
 ```
 sudo pacman -Syu cuda cudnn jupyter-notebook python-tensorflow-cuda
 ```
