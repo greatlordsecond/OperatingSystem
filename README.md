@@ -172,9 +172,8 @@ Server = https://arch.asus-linux.org
 ```
 pacman -Sy linux-g14 linux-firmware linux-g14-headers base-devel efibootmgr mtools \
 dosfstools openssh iwd zsh ntfs-3g amd-ucode xf86-video-amdgpu git ark unrar sshfs \
-networkmanager asusctl nvidia-dkms nvidia-utils nvidia-prime supergfxctl deepin \
-deepin-extra firefox virtualgl vlc gimp kdenlive qbittorrent obs-studio yt-dlp \
-gparted pacman-contrib
+networkmanager asusctl nvidia-dkms nvidia-utils nvidia-prime supergfxctl gnome gdm\
+firefox virtualgl vlc gimp kdenlive qbittorrent obs-studio yt-dlp gparted pacman-contrib
 ```
 
 **15) Set the timezone**
@@ -305,14 +304,7 @@ uncomment below line
 
 **25) Enable required services**
 ```
-systemctl enable systemd-networkd
-systemctl enable systemd-resolved
-systemctl enable systemd-timesyncd
-systemctl enable NetworkManager
-systemctl enable bluetooth
-systemctl enable power-profiles-daemon
-systemctl enable supergfxd
-systemctl enable lightdm
+systemctl enable systemd-networkd systemd-resolved systemd-timesyncd NetworkManager bluetooth power-profiles-daemon supergfxd gdm
 ```
 **26) Finish installation**
 ```
