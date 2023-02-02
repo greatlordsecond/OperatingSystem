@@ -172,9 +172,9 @@ Server = https://arch.asus-linux.org
 ```
 pacman -Sy linux-g14 linux-firmware linux-g14-headers base-devel efibootmgr mtools \
 dosfstools openssh iwd zsh ntfs-3g amd-ucode xf86-video-amdgpu git ark unrar sshfs \
-networkmanager asusctl nvidia-dkms nvidia-utils nvidia-prime supergfxctl gnome gdm\
-pipewire pipewire-pulse pavucontrol 
-firefox virtualgl vlc gimp kdenlive qbittorrent obs-studio yt-dlp gparted pacman-contrib
+networkmanager asusctl nvidia-dkms nvidia-utils nvidia-prime supergfxctl pipewire \
+pipewire-pulse pavucontrol  gnome gdm firefox virtualgl vlc gimp kdenlive \
+qbittorrent obs-studio yt-dlp gparted pacman-contrib
 ```
 
 **15) Set the timezone**
